@@ -18,13 +18,14 @@ feature 'Enter names' do # feature = Capybara terminology (same as 'describe' in
 	end
 end
 
+feature 'Attacking' do
+
+	scenario 'attack player 2 and confirm' do
+		sign_in_and_play
+		click_link 'Attack!'
+		expect(page).to have_content 'Wim attacked Elaine!'
+	end
+end
 
 
-# User Stories
-##############
-
-# visit the home page
-# fill in a text field with a name
-# fill in a second text field with a name
-# click a Submit button
 
