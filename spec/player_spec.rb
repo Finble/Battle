@@ -5,4 +5,8 @@ describe Player do
   it 'returns the name' do
     expect(wim.name).to eq 'wim'
   end
+
+  it 'returns the number of hitpoints' do
+    expect(wim.hitpoints).to eq 1000
+  end
 end

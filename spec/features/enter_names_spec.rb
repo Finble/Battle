@@ -7,9 +7,9 @@ feature 'Enter names' do # feature = Capybara terminology (same as 'describe' in
 		# Capybara.default_driver = :selenium
 		# end
 
-	scenario 'submitting names' do  
+	scenario 'submitting names' do
 		sign_in_and_play
-		expect(page).to have_content 'Wim vs. Elaine'  
+		expect(page).to have_content 'Wim vs. Elaine'
 	end
 
 	scenario 'view hit points' do
@@ -25,7 +25,11 @@ feature 'Attacking' do
 		click_link 'Attack!'
 		expect(page).to have_content 'Wim attacked Elaine!'
 	end
+
+	scenario 'attacks reduces player 2 with 2 HP' do
+		sign_in_and_play
+		click_link 'Attack!'
+
+		expect(page).to have_content 'Elaine: 998HP'
+	end
 end
-
-
-
