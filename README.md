@@ -6,7 +6,7 @@ Battle Challenge - the aim of this project is to generate code to address ato us
 Author
 ######
 
-This code was prepared by Elaine Finn and Bjoern Wagner @ Makers Academy (Jan 2016 cohort).
+This code was prepared by Elaine Finn and Wim Hekkelman @ Makers Academy (Jan 2016 cohort).
 
 Requirements
 ############
@@ -14,13 +14,17 @@ Requirements
 This project requires:
 
 - rspec
+- sinatra
+- rspec-sinatra
+- capybara
+- selenium-webdriver
 
 Installation
 ############
 
 Rspec is installed by following the content in this link: https://github.com/rspec/rspec-rails
 
-This Airport Challenge repo is cloned from: https://github.com/makersacademy/course/blob/master/intro_to_the_web/17_getting_started_with_battle.md
+This Battle Challenge repo is cloned from: https://github.com/makersacademy/course/blob/master/intro_to_the_web/17_getting_started_with_battle.md
 
 Configuration
 #############
@@ -31,9 +35,6 @@ Project Directories
 ###################
 
 
-User stories
-############
-can be found in user_stories_spec.rb
 
 IRB demo of app
 ###############

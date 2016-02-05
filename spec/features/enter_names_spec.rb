@@ -12,10 +12,18 @@ feature 'Enter names' do # feature = Capybara terminology (same as 'describe' in
 
 	scenario 'submitting names' do  
 		visit('/')  
-		fill_in :player_1_name, with: 'Bjoern' 
+		fill_in :player_1_name, with: 'Wim' 
 		fill_in :player_2_name, with: 'Elaine' 
 		click_button 'Submit'  
-		expect(page).to have_content 'Bjoern vs. Elaine'  
+		expect(page).to have_content 'Wim vs. Elaine'  
+	end
+
+	scenario 'view hit points' do
+		visit('/')
+		fill_in :player_1_name, with: 'Wim'
+		fill_in :player_2_name, with: 'Elaine'
+		click_button 'Submit'
+		expect(page).to have_content 'Elaine: 1000HP'
 	end
 end
 
