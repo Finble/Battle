@@ -1,8 +1,5 @@
 # insert tests to be run on Capybara
 
-require 'capybara/dsl'
-require 'selenium-webdriver'
-
 feature 'Enter names' do # feature = Capybara terminology (same as 'describe' in rspec)
 
 		# before do
@@ -11,18 +8,12 @@ feature 'Enter names' do # feature = Capybara terminology (same as 'describe' in
 		# end
 
 	scenario 'submitting names' do  
-		visit('/')  
-		fill_in :player_1_name, with: 'Wim' 
-		fill_in :player_2_name, with: 'Elaine' 
-		click_button 'Submit'  
+		sign_in_and_play
 		expect(page).to have_content 'Wim vs. Elaine'  
 	end
 
 	scenario 'view hit points' do
-		visit('/')
-		fill_in :player_1_name, with: 'Wim'
-		fill_in :player_2_name, with: 'Elaine'
-		click_button 'Submit'
+		sign_in_and_play
 		expect(page).to have_content 'Elaine: 1000HP'
 	end
 end
